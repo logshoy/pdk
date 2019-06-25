@@ -2586,8 +2586,8 @@ label {
     vertical-align: middle;
 }
 .block-news__content {
-  padding: 0 5px;
-  margin-top: 10px;
+  padding: 0 25px;
+  margin-top: 20px;
 }
 .block-news__date {
 
@@ -4488,6 +4488,7 @@ margin-right: 10px;
 .helps__heading {
   font-weight: bold;
   margin-bottom: 40px;
+  margin-top: 20px;
 }
 
 .helps {
@@ -5925,6 +5926,7 @@ width:70px;height:70px;-webkit-animation: uptocallmini 1.5s 0s ease-out infinite
     .footer__navigation-col{
         width: 33%;
         margin-right: 0px;
+        padding: 0;
     }
     .brand-slider{
         padding: 10px 10px;
@@ -5941,6 +5943,7 @@ width:70px;height:70px;-webkit-animation: uptocallmini 1.5s 0s ease-out infinite
     }
     .products_3 .product-card{
         width: 100%;
+        height: 320px;
     }
 
 
@@ -6121,6 +6124,16 @@ width:70px;height:70px;-webkit-animation: uptocallmini 1.5s 0s ease-out infinite
     flex-direction: column;
   }
 
+  .product_like,
+  .product_compare {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .products_3 .product-card:hover .product__wrapper {
+    border: 0;
+  }
+
   .link-all:before, .link-more:before {
     content: "";
     display: inline-block;
@@ -6133,6 +6146,8 @@ width:70px;height:70px;-webkit-animation: uptocallmini 1.5s 0s ease-out infinite
 
   .block-news__content {
     margin: 0;
+    padding: 0;
+    margin-left: 25px;
   }
 
   .block-news__link {
@@ -6160,11 +6175,16 @@ width:70px;height:70px;-webkit-animation: uptocallmini 1.5s 0s ease-out infinite
     border: 0px;
     height: auto;
     margin: 5px 0;
-    width: 85%;
+    width: 100%;
   }
 
   .slick-active::before {
     display: none;
+  }
+
+  .helps__text h3 {
+    padding: 0;
+    padding-bottom: 10px;
   }
 
   .helps {
@@ -6176,23 +6196,24 @@ width:70px;height:70px;-webkit-animation: uptocallmini 1.5s 0s ease-out infinite
   .helps__heading {
     text-align: center;
     margin-top: 20px;
+
   }
 
   .helps__item {
     width: 100%;
     max-width: 400px;
     flex-direction: column;
-    height: 200px;
+    height: 175px;
   }
 
   .helps__img {
-    margin: 20px 0;
+    margin: 10px 0;
     order: 1;
   }
 
   .helps__text {
     order: 2;
-    margin-bottom: 20px;
+    margin-top: 10px;
   }
  .catalog-mobile {
     display: flex;
