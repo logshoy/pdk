@@ -4685,9 +4685,14 @@ margin-right: 10px;
 .footer__button {
   width: 180px;
   height: 40px;
-  background-color: #f22613;
+  font-weight: 700;
+  background-color: #1c384b;
   border-radius: 5px;
   border: 2px solid #426883;
+}
+
+.footer__button:hover {
+    background-color: #f22613;
 }
 
 .footer__button span {
@@ -4736,6 +4741,12 @@ margin-right: 10px;
     border-radius: 4px;
 }
 
+
+.box-modal_medium {
+    width: 630px;
+    padding: 44px 70px;
+}
+
 .box-modal_large {
     width: 800px;
 }
@@ -4751,19 +4762,16 @@ margin-right: 10px;
 }
 
 .box-modal__close {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
     text-indent: -9999px;
-    height: 19px;
-    width: 19px;
-    background: url("../img/sprite.png?v=3") -58px -32px no-repeat;
+    display: block;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    right: -20px;
+    top: -20px;
+    background: url("../img/i-x.png") left top no-repeat;
 }
 
-.box-modal__close:hover {
-    background-position: -82px -32px;
-}
 
 .arcticmodal-overlay, .arcticmodal-container {
     position: fixed;
@@ -6306,6 +6314,14 @@ width:70px;height:70px;-webkit-animation: uptocallmini 1.5s 0s ease-out infinite
   font-weight: 700;
 }
 
+.request__select option {
+    line-height: 17px;
+    color: #282828;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .9px;
+}
+
 .request__file-block {
   position: relative;
   height: 40px;
@@ -6326,6 +6342,10 @@ width:70px;height:70px;-webkit-animation: uptocallmini 1.5s 0s ease-out infinite
 
 .request__file-index input {
   height: 40px;
+}
+
+.request__filerare {
+  margin: 10px 0;
 }
 
 .request__btn {
@@ -6388,6 +6408,11 @@ width:70px;height:70px;-webkit-animation: uptocallmini 1.5s 0s ease-out infinite
   border-top: 2px solid #e5e5e5;
   padding: 10px 15px;
   height: 40px;
+  font-weight: 700;
+}
+
+.request__input--callback {
+  margin: 10px auto;
 }
 
 .request__input--square {
@@ -6412,6 +6437,17 @@ width:70px;height:70px;-webkit-animation: uptocallmini 1.5s 0s ease-out infinite
   height: 40px;
   letter-spacing: .8px;
 }
+
+.request__button--callback {
+  width: 236px;
+  margin: 0 auto;
+}
+
+.request__personaldata {
+  display: none;
+  margin-bottom: 20px;
+}
+
 
 /* */
 .triangle {

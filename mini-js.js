@@ -1,3 +1,7 @@
+
+$('.request__link-data').click(function () {
+	$('.request__personaldata').toggle();
+});
 	var Оценка = -1;
 
 	var Строка_звёздочек = document.getElementById("Оценки");
