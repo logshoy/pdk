@@ -2,20 +2,22 @@
 $('.request__link-data').click(function () {
 	$('.request__personaldata').toggle();
 });
-	var Оценка = -1;
 
-	var Строка_звёздочек = document.getElementById("Оценки");
-	for (let сч = 0; сч < 5; сч++) {
-		let звёздочка = document.createElement('span');
-		звёздочка.onclick = function () { Выбрать_звёздочку(сч, true); };
-		звёздочка.onmouseover = function () { Выбрать_звёздочку(сч); };
-		звёздочка.innerHTML = "★";
-		Строка_звёздочек.appendChild(звёздочка);
-	}
+$(document).ready(function(){
+		$('form input[type="submit"]').prop("disabled", true);
+		$('form input[type="submit"]').css("opacity", "0.3");
+		$(".agree").click(function(){
+            if($(this).prop("checked") == true){
+                $('form input[type="submit"]').prop("disabled", false);
+								$('form input[type="submit"]').css("opacity", "1");
+            }
+            else if($(this).prop("checked") == false){
+                $('form input[type="submit"]').prop("disabled", true);
+								$('form input[type="submit"]').css("opacity", "0.3");
+            }
+        });
+    });
 
-	function Выбрать_звёздочку(зв, уст = false) {
-		if (уст) Оценка = зв; else if (зв < 0) зв = Оценка;
-		Array.from(document.querySelectorAll("#Оценки span")).forEach(function (зн, сч) {
-			зн.style.color = сч > зв ? "#000" : "#F00";
-		});
-	};
+jQuery(document).ready(function(){
+	$('.request__phone').mask('+0 (000) 000 00 00', {placeholder: "+_ (___) ___ __ __"});
+});

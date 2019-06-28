@@ -16,7 +16,12 @@
 	<link href="./теплый пол, терморегуляторы, греющий кабель!!!_files/style.css" rel="stylesheet">
 	<link href="./теплый пол, терморегуляторы, греющий кабель!!!_files/css" rel="stylesheet" type="text/css">
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-	<script type="text/javascript" async="" src="./теплый пол, терморегуляторы, греющий кабель!!!_files/watch.js"></script><script async="" src="./теплый пол, терморегуляторы, греющий кабель!!!_files/loader.js"></script><script type="text/javascript" async="" src="./теплый пол, терморегуляторы, греющий кабель!!!_files/analytics.js"></script><script src="./теплый пол, терморегуляторы, греющий кабель!!!_files/jquery.min.js"></script>
+	<script type="text/javascript" async="" src="./теплый пол, терморегуляторы, греющий кабель!!!_files/watch.js"></script>
+	<script async="" src="./теплый пол, терморегуляторы, греющий кабель!!!_files/loader.js"></script>
+	<script type="text/javascript" async="" src="./теплый пол, терморегуляторы, греющий кабель!!!_files/analytics.js"></script>
+	<script src="./теплый пол, терморегуляторы, греющий кабель!!!_files/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="jquery.mask.min.js"></script>
 		<meta name="csrf-token" content="NXL2ag4hvKHA0CGv6db8KjkXTyF9nmymN2H1JDza">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async="" src="./теплый пол, терморегуляторы, греющий кабель!!!_files/js"></script>
@@ -1765,22 +1770,23 @@
 	<div class="box-modal box-modal_medium" id="letter_supervisor">
 		<div class="box-modal__close arcticmodal-close">закрыть</div>
 		<h1 class="request__title">Письмо руководству</h1>
-		<form class="request" action="index.html" method="post">
-			<input class="request__input" type="text" name="name" placeholder="Ваше ФИО">
-			<input class="request__input" type="phone" name="phone" placeholder="+7(###)###-##-##">
-			<input class="request__input" type="email" name="email" placeholder="E-MAIL">
-			<textarea class="request__input request__input--textarea" name="name" rows="8" cols="80" placeholder="Дополнительная информация"></textarea>
+		<form id="request__form" class="request" action="index.html" method="post">
+			<input id="request__name" class="request__input" type="text" name="name" placeholder="Ваше ФИО">
+			<input id="request__phone" class="request__input" type="phone" name="phone" placeholder="+7(###)###-##-##" data-mask="+7 (000) 000 00 00">
+			<input id="request__email" class="request__input" type="email" name="email" placeholder="E-MAIL">
+			<textarea id="request__message" class="request__input request__input--textarea" name="name" rows="8" cols="80" placeholder="Дополнительная информация"></textarea>
 			<div class="request__filerare">
 				Приложить файл (до 5 Мб): <input type="file" name="" value="">
 			</div>
 			<div class="request__checkbox request__checkbox--query">
-				<input type="checkbox" id="info2">
+				<input class="agree" type="checkbox" id="info2">
 				<label for="info2">Я ознакомлен и согласен на <a class="request__link-data" href="#">обработку персональных данных</a></label>
 			</div>
 			<div class="request__personaldata">
 				Оставляя заявку на товары/услуги, представленные на сайте, Я добровольно предоставляю ООО "Русклимат-Челябинск", а также партнерам ООО "Русклимат-Челябинск" (поставщикам, подрядчикам, субподрядчикам, перевозчикам и другим партнерам, работающим по исполнению клиентских заявок на основании заключенных с ООО "Русклимат-Челябинск" договоров), право на обработку своих персональных данных всеми способами, указанными в Федеральном законе от 27.07.2006 N 152-ФЗ «О персональных данных», для целей исполнения моей заявки на товары/услуги.
 			</div>
-			<button class="request__button" type="button" name="button">ОТПРАВИТЬ ПИСЬМО</button>
+			<input id="request__send" class="request__button" type="submit" value="Submit">
+			<!---<button class="request__button" type="button" name="button">ОТПРАВИТЬ ПИСЬМО</button> -->
 		</form>
 		</div>
 	</div>
@@ -1791,7 +1797,7 @@
 		<div class="box-modal__close arcticmodal-close">закрыть</div>
 		<h1 class="request__title">Обратный звонок</h1>
 		<form class="request" action="index.html" method="post">
-			<input class="request__input request__input--callback" type="phone" name="phone" placeholder="+7(###)###-##-##">
+			<input class="request__input request__input--phone request__input--callback" type="phone" name="phone" placeholder="+7(###)###-##-##">
 			<div class="request__checkbox request__checkbox--query">
 				<input type="checkbox" id="info2">
 				<label for="info2">Я ознакомлен и согласен на <a class="request__link-data" href="#">обработку персональных данных</a></label>
