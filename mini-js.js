@@ -18,6 +18,6 @@ $(document).ready(function(){
         });
     });
 
-jQuery(document).ready(function(){
-	$('.request__phone').mask('+0 (000) 000 00 00', {placeholder: "+_ (___) ___ __ __"});
+$(document).ready(function(){
+	$('.request--phone').mask('+0 (000) 000 00 00');
 });

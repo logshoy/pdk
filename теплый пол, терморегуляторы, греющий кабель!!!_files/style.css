@@ -2536,6 +2536,9 @@ label {
 }
 
 .small-banners__block {
+  position: relative;
+  display: block;
+  overflow: hidden;
   width: 33%;
   margin: 0 15px;
 }
@@ -2545,6 +2548,30 @@ label {
   height: 100%;
 }
 
+.small-banners__block::before {
+  position: absolute;
+    top: 0;
+    left: -45%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 25%;
+    height: 100%;
+    opacity: 0;;
+    background: linear-gradient(to right,rgba(255,255,255,0) 0,rgba(255,255,255,.3) 100%);
+    transform: skewX(-25deg);
+}
+
+@keyframes shine{
+  100% {
+    left: 125%;
+  }
+}
+
+.small-banners__block:hover::before {
+  animation: .5s shine;
+  opacity: 1;
+}
 
 /* ----------- news block ----------- */
 

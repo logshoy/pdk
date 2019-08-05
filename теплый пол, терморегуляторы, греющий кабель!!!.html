@@ -1449,6 +1449,26 @@
       </div>
     </div>
   </div>
+
+	<div class="block block_main block_info main-info">
+		<div class="layout">
+			<a class="link-all link-all_right" href="{{ url('/articles') }}">Все статьи</a>
+				<div class="block__title">Полезная информация</div>
+					<div class="info">
+						<a href="{{ $entry->route }}" class="info__link">
+								<div class="block-news__cover">
+								<img src="{{ $entry->cover ? $entry->cover('medium') : config('settings.noimage') }}">
+								</div>
+								<div class="info__text">
+								<h4 class="block-news__link">{{ $entry->name }}</h4>
+								<div>Читать далее...</div>
+							</div>
+						</a>
+			</div>
+		</div>
+	</div>
+
+
 			<div class="layout">
 				<a href="#"><h3 class="info_heading">ПОЛЕЗНАЯ ИНФОРМАЦИЯ</h3></a>
 				<div class="info">
@@ -1772,7 +1792,7 @@
 		<h1 class="request__title">Письмо руководству</h1>
 		<form id="request__form" class="request" action="index.html" method="post">
 			<input id="request__name" class="request__input" type="text" name="name" placeholder="Ваше ФИО">
-			<input id="request__phone" class="request__input" type="phone" name="phone" placeholder="+7(###)###-##-##" data-mask="+7 (000) 000 00 00">
+			<input class="request__input request--phone" type="phone" name="phone" data-mask="+7 000 000 00 00" placeholder="+7(###)###-##-##">
 			<input id="request__email" class="request__input" type="email" name="email" placeholder="E-MAIL">
 			<textarea id="request__message" class="request__input request__input--textarea" name="name" rows="8" cols="80" placeholder="Дополнительная информация"></textarea>
 			<div class="request__filerare">
